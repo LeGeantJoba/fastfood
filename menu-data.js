@@ -1,49 +1,199 @@
-// ===== Menu data (mcharek bin index.html w product.html) =====
-// 👉 Bach tzid tsawer dyalk: 7et l fichier dyal l image f dossier "images/"
-// w 3tih l isem li kayn f "img" (masalan images/burger.jpg).
-// "img2" (optionnel): tsawira li kaytbadal m3aha automatiquement mli t7ot souris (hover) -
-// mzyana bach twri l item m7loul/mghlou9 mn dakhel.
-// "id": isem sahel (slug) kaydkhol f l URL dyal page dyal product (product.html?id=...)
+// ===== Données dyal site (mcharkin bin index.html w product.html) =====
+//
+// Kol item 3ndou jouj tsawer:
+//   img  -> tswira "msdouda" (l plat kima kayji)
+//   img2 -> tswira "m7loula" (mn dakhel / ingrédients) — katbane mli t7ot souris fou9
+//
+// Bach tbeddel chi tswira placeholder b wa7da 7a9i9iya:
+// 7ot l fichier dyalek f "images/" b NEFS l isem (masalan images/frites.jpg) w safi.
+
+const CATEGORIES = [
+  { id: "all",     label: "Kolchi" },
+  { id: "burgers", label: "Burgers" },
+  { id: "tacos",   label: "Tacos" },
+  { id: "pizza",   label: "Pizza" },
+  { id: "pasta",   label: "Pasta" },
+  { id: "sides",   label: "Sides" },
+  { id: "drinks",  label: "Drinks" }
+];
+
 const MENU = [
   {
     id: "boukka-classic",
     cat: "burgers",
     name: "Boukka Classic",
-    desc: "Steak haché, jben cheddar, salade, tomate, sauce secrète dyalna.",
-    price: "35 DH",
+    desc: "Steak haché tazej, cheddar mdewweb, salade, tomate, w sauce secrète dyalna.",
+    ingredients: ["Steak haché 150g", "Cheddar", "Salade + tomate", "Sauce Boukka"],
+    price: 35,
     img: "images/burger.jpg",
     img2: "images/burger2.jpg",
     badge: "Top vente"
   },
   {
+    id: "double-cheese",
+    cat: "burgers",
+    name: "Double Cheese Bomb",
+    desc: "Jouj steaks, jouj tranches jben, basla caramélisée. Ghi lil jou3anin b sse7.",
+    ingredients: ["2x Steak haché", "Double cheddar", "Basla caramélisée", "Sauce BBQ"],
+    price: 48,
+    img: "images/double-cheese.jpg",
+    img2: "images/double-cheese2.jpg"
+  },
+  {
+    id: "spicy-chicken",
+    cat: "burgers",
+    name: "Spicy Chicken",
+    desc: "Poulet mqermech, sauce harra, coleslaw bared bach y3adel l7arr.",
+    ingredients: ["Poulet pané", "Sauce harra", "Coleslaw", "Pickles"],
+    price: 38,
+    img: "images/spicy-chicken.jpg",
+    img2: "images/spicy-chicken2.jpg",
+    badge: "Harr"
+  },
+  {
     id: "tacos-poulet",
     cat: "tacos",
     name: "Tacos Poulet",
-    desc: "Poulet, frites dakhel, jben, sauce fromagère + sauce dyalna.",
-    price: "32 DH",
+    desc: "Poulet mtebbel, frites dakhel, jben rayeb, sauce fromagère + sauce dyalna.",
+    ingredients: ["Poulet mtebbel", "Frites", "Sauce fromagère", "Galette grillée"],
+    price: 32,
     img: "images/tacos.jpg",
     img2: "images/tacos2.jpg"
+  },
+  {
+    id: "tacos-viande",
+    cat: "tacos",
+    name: "Tacos Viande Hachée",
+    desc: "Viande hachée m3eddla b l3ebbar, frites, jben, sauce bayda.",
+    ingredients: ["Viande hachée", "Frites", "Jben", "Sauce blanche"],
+    price: 34,
+    img: "images/tacos-viande.jpg",
+    img2: "images/tacos-viande2.jpg"
+  },
+  {
+    id: "tacos-mixte",
+    cat: "tacos",
+    name: "Tacos Mixte",
+    desc: "Poulet + merguez f wa7ed. Ila ma 3refti chnou tkhtar, hada howa l jawab.",
+    ingredients: ["Poulet", "Merguez", "Frites", "Triple sauce"],
+    price: 40,
+    img: "images/tacos-mixte.jpg",
+    img2: "images/tacos-mixte2.jpg",
+    badge: "Chef's pick"
   },
   {
     id: "pizza-boukka",
     cat: "pizza",
     name: "Pizza Boukka",
-    desc: "Sauce tomate, mozzarella dwaz, poulet, poivrons, olives.",
-    price: "55 DH",
+    desc: "Sauce tomate mtiyyba b lidd, mozzarella, poulet, poivrons w zaytoun.",
+    ingredients: ["Pâte maison", "Mozzarella", "Poulet", "Poivrons + zaytoun"],
+    price: 55,
     img: "images/pizza.jpg",
     img2: "images/pizza2.jpg",
     badge: "Top vente"
   },
   {
+    id: "pizza-4fromages",
+    cat: "pizza",
+    name: "Pizza 4 Fromages",
+    desc: "Mozzarella, cheddar, gouda w bleu. Lil li kayhebbou jben b sse7.",
+    ingredients: ["Mozzarella", "Cheddar", "Gouda", "Bleu"],
+    price: 58,
+    img: "images/pizza-4fromages.jpg",
+    img2: "images/pizza-4fromages2.jpg"
+  },
+  {
     id: "pasta-bolognaise",
     cat: "pasta",
     name: "Pasta Bolognaise",
-    desc: "Viande hachée, sauce tomate mija, parmesan fou9.",
-    price: "42 DH",
+    desc: "Viande hachée, sauce tomate mtiyyba b chwiya, parmesan mberched fou9.",
+    ingredients: ["Spaghetti", "Viande hachée", "Sauce tomate", "Parmesan"],
+    price: 42,
     img: "images/pasta.jpg",
     img2: "images/pasta2.jpg"
+  },
+  {
+    id: "pasta-alfredo",
+    cat: "pasta",
+    name: "Pasta Alfredo",
+    desc: "Sauce crème mkhelta b jben, poulet grillé, w m3adnous tazej.",
+    ingredients: ["Tagliatelle", "Sauce crème", "Poulet grillé", "Parmesan"],
+    price: 44,
+    img: "images/pasta-alfredo.jpg",
+    img2: "images/pasta-alfredo2.jpg"
+  },
+  {
+    id: "frites-maison",
+    cat: "sides",
+    name: "Frites Maison",
+    desc: "Mqermcha mn berra, tariya mn dakhel. Assaisonnement dyalna.",
+    ingredients: ["Btata tazja", "Sel mtebbel", "Sauce dyalek"],
+    price: 15,
+    img: "images/frites.jpg",
+    img2: "images/frites2.jpg"
+  },
+  {
+    id: "onion-rings",
+    cat: "sides",
+    name: "Onion Rings",
+    desc: "7al9at basla mghellfin w mqermchin, m3a sauce BBQ jnabhom.",
+    ingredients: ["Basla", "Panure croustillante", "Sauce BBQ"],
+    price: 18,
+    img: "images/onion-rings.jpg",
+    img2: "images/onion-rings2.jpg"
+  },
+  {
+    id: "nuggets",
+    cat: "sides",
+    name: "Nuggets x6",
+    desc: "Poulet 100%, panure mqermcha, w sauce li bghiti.",
+    ingredients: ["6x Nuggets", "Poulet 100%", "Sauce au choix"],
+    price: 22,
+    img: "images/nuggets.jpg",
+    img2: "images/nuggets2.jpg"
+  },
+  {
+    id: "milkshake",
+    cat: "drinks",
+    name: "Milkshake Chocolat",
+    desc: "Crémeux, 7lou b l9ad, b chantilly fou9.",
+    ingredients: ["Lait entier", "Chocolat", "Glace vanille", "Chantilly"],
+    price: 20,
+    img: "images/milkshake.jpg",
+    img2: "images/milkshake2.jpg",
+    badge: "7lou"
+  },
+  {
+    id: "jus-orange",
+    cat: "drinks",
+    name: "Jus d'Orange",
+    desc: "Limoun m3sour f l moment, bla sukkar zayed.",
+    ingredients: ["Limoun tazej", "Bla sukkar", "33 cl"],
+    price: 14,
+    img: "images/jus-orange.jpg",
+    img2: "images/jus-orange2.jpg"
+  },
+  {
+    id: "coca",
+    cat: "drinks",
+    name: "Coca-Cola",
+    desc: "Bared bared, 33 cl.",
+    ingredients: ["33 cl", "Bared"],
+    price: 8,
+    img: "images/coca.jpg",
+    img2: "images/coca2.jpg"
   }
 ];
 
-// 👉 Bddel had rakm b rakm dyal WhatsApp dyal l fast food (format: code pays + rakm, bla +)
+// Les offres li kaydouzo f l bande mtaharrka (marquee) w f section dyal offres
+const OFFERS = [
+  { title: "Combo Boukka −20%",   detail: "Burger + frites + drink, kol nhar mn 12h l 16h." },
+  { title: "Livraison Gratuite",  detail: "Fo9 100 DH d commande, matkhelless walo f livraison." },
+  { title: "2 Pizza = 1",         detail: "Kol nhar tlata, khod jouj pizza w khelles ghi wa7da." },
+  { title: "Happy Hour −15%",     detail: "Mn 18h l 20h, kol commande −15% automatiquement." }
+];
+
+// 👉 Bddel had rakm b rakm dyal WhatsApp dyal l fast food (code pays + rakm, bla +)
 const WHATSAPP_NUMBER = "212600000000";
+
+const CURRENCY = "DH";

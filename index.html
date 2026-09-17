@@ -3,208 +3,200 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BOUKKA 🔥 Fast Food</title>
+<title>BOUKKA — Fast Food, Casablanca</title>
+<meta name="description" content="Burgers, tacos, pizza w pasta mtiyybin f l wa9t. Commande b WhatsApp, tji 3ndek f 15 min. Derb Sultan, Casablanca.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ===== NAV ===== -->
+<!-- ============ NAV ============ -->
 <header class="nav" id="nav">
   <div class="nav-inner">
-    <a href="#top" class="logo">BOUKKA<span>🔥</span></a>
+    <a href="#top" class="logo">Boukka<i></i></a>
     <nav class="nav-links" id="navLinks">
-      <a href="#offers">Offres 🔥</a>
       <a href="#menu">Menu</a>
-      <a href="#about">C'est quoi?</a>
+      <a href="#story">L 7kaya</a>
+      <a href="#offers">Offres</a>
       <a href="#order">Commander</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a href="#order" class="btn btn-nav">Commander 🛵</a>
-    <button class="burger" id="burgerBtn" aria-label="menu">
+    <a href="#order" class="btn btn-gold">Commander</a>
+    <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 </header>
 
-<!-- ===== HERO (tsawer khalfiya kaydouzo automatiquement) ===== -->
+<!-- ============ HERO ============ -->
 <section class="hero" id="top">
-  <div class="hero-bg" id="heroBg">
-    <div class="hero-bg-slide active"><img src="images/burger.jpg" alt="Boukka Classic"></div>
-    <div class="hero-bg-slide"><img src="images/tacos.jpg" alt="Tacos Poulet"></div>
-    <div class="hero-bg-slide"><img src="images/pizza.jpg" alt="Pizza Boukka"></div>
-    <div class="hero-bg-slide"><img src="images/pasta.jpg" alt="Pasta Bolognaise"></div>
-  </div>
-  <div class="hero-overlay"></div>
-  <div class="floaties">
-    <span style="--x:8%; --d:0s;">🍔</span>
-    <span style="--x:80%; --d:1.5s;">🌮</span>
-    <span style="--x:20%; --d:3s;">🍟</span>
-    <span style="--x:65%; --d:.8s;">🥤</span>
-    <span style="--x:45%; --d:2.2s;">🍕</span>
-    <span style="--x:90%; --d:3.6s;">🍗</span>
-  </div>
+  <div class="hero-bg" id="heroBg"><!-- slides injectés par JS --></div>
+  <div class="hero-veil"></div>
 
-  <div class="hero-content">
-    <p class="hero-eyebrow">Ki les meilleurs snacks nta3 houma f houma 😋</p>
-    <h1>Jou3ek? <span class="highlight">Wa9tach</span> gha ta9dar!</h1>
-    <p class="hero-sub">Burgers dyal deghya, tacos li kaydeuwbou, w frites li matnsach. Commande daba, tji f wa9tha wla nrejo3lek flouss 😏</p>
-    <div class="hero-cta">
-      <a href="#menu" class="btn btn-primary">Chouf Menu 🍟</a>
-      <a href="#order" class="btn btn-ghost">Commande b WhatsApp 💬</a>
-    </div>
-    <div class="hero-stats" id="heroStats">
-      <div><strong data-count="15" data-suffix=" min">0 min</strong><span>chrono livraison</span></div>
-      <div><strong data-count="4.9" data-decimals="1" data-suffix="★">0★</strong><span>machi kadbin</span></div>
-      <div><strong data-count="50" data-prefix="+">+0</strong><span>plat f menu</span></div>
-    </div>
-  </div>
-  <div class="hero-dots" id="heroDots"></div>
-</section>
-
-<!-- ===== OFFERS ===== -->
-<section class="offers" id="offers">
-  <div class="offers-inner">
-    <div class="offers-track" id="offersTrack">
-      <div class="offer-slide active">
-        <span class="offer-emoji">🔥</span>
-        <div class="offer-text">
-          <h3>Combo Boukka -20%</h3>
-          <p>Burger + Frites + Drink b 20% ta5fid, kol nhar mn 12h l 16h.</p>
-        </div>
-      </div>
-      <div class="offer-slide">
-        <span class="offer-emoji">🛵</span>
-        <div class="offer-text">
-          <h3>Livraison Gratuite</h3>
-          <p>Fo9 100 DH d commande, matkhelseh walo f livraison.</p>
-        </div>
-      </div>
-      <div class="offer-slide">
-        <span class="offer-emoji">🍕🍕</span>
-        <div class="offer-text">
-          <h3>2 Pizza b Prix Wa7ed</h3>
-          <p>Kol nhar tlata, khod jouj pizza w khelles ghi wa7da.</p>
-        </div>
-      </div>
-      <div class="offer-slide">
-        <span class="offer-emoji">⏰</span>
-        <div class="offer-text">
-          <h3>Happy Hour -15%</h3>
-          <p>Mn 18h l 20h, kol commande -15% automatiquement.</p>
-        </div>
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="kicker">Derb Sultan · Casablanca</p>
+      <h1>Jou3ek?<br><em>Hna</em> kayn l7ell.</h1>
+      <p class="hero-sub">
+        Makla mtiyyba f l wa9t, machi mkhebb3a f frigo. Commande daba —
+        tji 3ndek s5ouna f 15 min, wla l livraison 3lina.
+      </p>
+      <div class="hero-cta">
+        <a href="#menu" class="btn btn-gold">Chouf l menu</a>
+        <a href="#order" class="btn btn-ghost">Commande b WhatsApp</a>
       </div>
     </div>
-    <div class="offers-dots" id="offersDots"></div>
+
+    <div class="hero-rail" id="heroRail"><!-- injecté par JS --></div>
   </div>
+
+  <div class="scroll-hint"><i></i> Scrolli</div>
 </section>
 
-<!-- ===== ABOUT ===== -->
-<section class="about" id="about">
-  <div class="about-card reveal">
-    <span class="emoji-big">🍔</span>
-    <h3>Tazegue kol nhar</h3>
-    <p>Khoudra w lham tazgin, kayjiw kol sba7 — walo mchergel f frigo l 3am li fat.</p>
-  </div>
-  <div class="about-card reveal">
-    <span class="emoji-big">⚡</span>
-    <h3>Deghya bla ma tsber</h3>
-    <p>Mn commande l ba9a hna dabbez, matsna9ch bezaf — houna "fast" f "fast food" khedama.</p>
-  </div>
-  <div class="about-card reveal">
-    <span class="emoji-big">❤️</span>
-    <h3>Recette dyal dar</h3>
-    <p>Sauce secrète dyalna, ma tal9awha ghi 3endna. Chi haja b nia, machi f3lan corporate.</p>
-  </div>
-</section>
+<!-- ============ MARQUEE ============ -->
+<div class="marquee">
+  <div class="marquee-track" id="marqueeTrack"><!-- injecté par JS --></div>
+</div>
 
-<!-- ===== MENU ===== -->
-<section class="menu" id="menu">
+<!-- ============ STATS ============ -->
+<div class="stats" id="stats">
+  <div class="stat"><strong data-count="15" data-suffix=" min">0</strong><span>Chrono livraison</span></div>
+  <div class="stat"><strong data-count="4.9" data-decimals="1">0</strong><span>Note dyal l clients</span></div>
+  <div class="stat"><strong data-count="16" data-prefix="+">0</strong><span>Plats f l menu</span></div>
+  <div class="stat"><strong data-count="7" data-suffix="/7">0</strong><span>7ta nhar l 3id</span></div>
+</div>
+
+<!-- ============ MENU ============ -->
+<section class="section" id="menu">
   <div class="section-head reveal">
-    <p class="eyebrow">Chnahouwa Kayn</p>
-    <h2>L Menu dyalna 🍟</h2>
-  </div>
-
-  <div class="tabs" id="tabs">
-    <button class="tab active" data-cat="all">🔥 Kolchi</button>
-    <button class="tab" data-cat="burgers">🍔 Burgers</button>
-    <button class="tab" data-cat="tacos">🌮 Tacos</button>
-    <button class="tab" data-cat="pizza">🍕 Pizza</button>
-    <button class="tab" data-cat="pasta">🍝 Pasta</button>
-  </div>
-
-  <div class="menu-grid" id="menuGrid">
-    <!-- filled by JS -->
-  </div>
-</section>
-
-<!-- ===== ORDER ===== -->
-<section class="order" id="order">
-  <div class="order-card reveal">
-    <div class="order-text">
-      <p class="eyebrow">Wach Tji Nakl?</p>
-      <h2>Commande f 30 seconde ⏱️</h2>
-      <p>3mmr smiytek, chno bghiti takoul, w had ndouwzo lik direct l WhatsApp. Kanjawbou b zerba!</p>
+    <div>
+      <p class="kicker">Chnou kayn</p>
+      <h2>L menu</h2>
     </div>
-    <form class="order-form" id="orderForm">
-      <div class="field">
-        <label for="name">Smiytek</label>
-        <input type="text" id="name" placeholder="Mohammed Alami" required>
+    <p>7ott souris fou9 chi tswira bach tchouf chnou kayn dakhel. Click bach tchouf kolchi.</p>
+  </div>
+
+  <div class="filters" id="filters"><!-- injecté par JS --></div>
+  <div class="grid" id="menuGrid"><!-- injecté par JS --></div>
+</section>
+
+<!-- ============ STORY ============ -->
+<section class="story">
+  <div class="section">
+    <div class="section-head reveal">
+      <div>
+        <p class="kicker">3lach 7na</p>
+        <h2>Machi ghi fast food</h2>
       </div>
-      <div class="field">
-        <label for="phone">Telephone</label>
-        <input type="tel" id="phone" placeholder="06 12 34 56 78" required>
+      <p>Tlata d l9wa3id li ma kankhrjou 3lihom 7ta mrra, mn 2019.</p>
+    </div>
+
+    <div class="story-grid">
+      <div class="story-item reveal">
+        <span>01</span>
+        <h3>Tazej kol sba7</h3>
+        <p>L khoudra w l7em kayjiw kol sba7 mn souq. Walo mchergel mn l bare7, walo mkhebbe3 f congélateur.</p>
       </div>
-      <div class="field">
-        <label for="items">Chno bghiti takoul?</label>
-        <textarea id="items" rows="3" placeholder="Messt: 2x Boukka Classic, 1x Tacos Poulet, Coca..." required></textarea>
+      <div class="story-item reveal">
+        <span>02</span>
+        <h3>Mtiyyeb f l moment</h3>
+        <p>Ma kanti7bouch chi 7aja 9bel ma tji commande. 3lach? 7it l frites li kaystenna 10 min kat3awed twelli tariya.</p>
       </div>
-      <div class="field">
-        <label for="address">Adresse dyal livraison</label>
-        <input type="text" id="address" placeholder="Houma, zen9a, ra9m..." required>
+      <div class="story-item reveal">
+        <span>03</span>
+        <h3>Sauce dyalna 7na</h3>
+        <p>Recette dyal dar, ma tal9awhach 3end 7ta wa7ed akhor. Hadi hiya sabab li 3lach l clients kayrej3ou.</p>
       </div>
-      <button type="submit" class="btn btn-primary btn-full">Sift l WhatsApp 💬</button>
-      <p class="form-note">Ghatouj7ek l WhatsApp bach tkml commande, chi haja matgheelsh mn hna.</p>
-    </form>
+    </div>
   </div>
 </section>
 
-<!-- ===== CONTACT / FOOTER ===== -->
+<!-- ============ OFFRES ============ -->
+<section class="section" id="offers">
+  <div class="section-head reveal">
+    <div>
+      <p class="kicker">Ta5fidat</p>
+      <h2>Offres dyal daba</h2>
+    </div>
+    <p>Kol wa7da khddama automatiquement — match7alch chi code.</p>
+  </div>
+  <div class="offers-grid" id="offersGrid"><!-- injecté par JS --></div>
+</section>
+
+<!-- ============ COMMANDE ============ -->
+<section class="order" id="order">
+  <div class="section">
+    <div class="order-grid">
+      <div class="order-copy reveal">
+        <p class="kicker">30 seconde</p>
+        <h2>Commande daba</h2>
+        <p>3mmer l formulaire, w 7na ndouwzou lik commande direct l WhatsApp mrettba. Kanjawbou f 9el mn 2 min.</p>
+        <ul class="order-points">
+          <li><b>01</b> 3mmer smiytek, telephone w adresse</li>
+          <li><b>02</b> Zid li bghiti mn l menu (wla ktebha b yeddek)</li>
+          <li><b>03</b> Sift — w 7na nconfirmiw lik f WhatsApp</li>
+        </ul>
+      </div>
+
+      <form id="orderForm" class="reveal">
+        <div class="field">
+          <label for="name">Smiytek</label>
+          <input type="text" id="name" placeholder="Mohammed Alami" required>
+        </div>
+        <div class="field">
+          <label for="phone">Telephone</label>
+          <input type="tel" id="phone" placeholder="06 12 34 56 78" required>
+        </div>
+        <div class="field">
+          <label for="items">Chnou bghiti takoul</label>
+          <textarea id="items" rows="3" placeholder="2x Boukka Classic, 1x Tacos Poulet, Coca..." required></textarea>
+        </div>
+        <div class="field">
+          <label for="address">Adresse dyal livraison</label>
+          <input type="text" id="address" placeholder="Houma, zen9a, ra9m dyal dar..." required>
+        </div>
+        <button type="submit" class="btn btn-gold btn-full">Sift l WhatsApp</button>
+        <p class="form-note">Ghadi t7ell 3ndek WhatsApp b message m3emmer. Walo ma kayt-sift mn hna bo7dou.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
 <footer class="footer" id="contact">
-  <div class="footer-top">
+  <div class="footer-inner">
     <div class="footer-brand">
-      <span class="logo">BOUKKA<span>🔥</span></span>
-      <p>Jou3ek howa mochkil dyalna. Kolchi 5er, deghya, w bnia. 🍔🌮🍟</p>
+      <span class="logo">Boukka<i></i></span>
+      <p>Jou3ek howa l mochkil dyalna. Burgers, tacos, pizza w pasta — kolchi tazej, kolchi deghya.</p>
     </div>
     <div class="footer-col">
       <h4>Horaires</h4>
-      <p>Kol nhar: 11h — 00h</p>
-      <p>Jom3a: 14h — 01h</p>
+      <p>Lundi — Jeudi : 11h · 00h</p>
+      <p>Vendredi : 14h · 01h</p>
+      <p>Weekend : 11h · 02h</p>
     </div>
     <div class="footer-col">
       <h4>Contact</h4>
-      <p>📞 06 61 02 03 04</p>
-      <p>📍 Derb Sultan, Casablanca</p>
+      <a href="tel:+212661020304">06 61 02 03 04</a>
+      <p>Derb Sultan, Casablanca</p>
     </div>
     <div class="footer-col">
-      <h4>Cheddi</h4>
-      <div class="socials">
-        <a href="#" aria-label="instagram">📸</a>
-        <a href="#" aria-label="facebook">👍</a>
-        <a href="#" aria-label="tiktok">🎵</a>
-      </div>
+      <h4>Cheddi m3ana</h4>
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+      <a href="#">TikTok</a>
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2026 BOUKKA — Machi ghi fast food, houwa mood 🔥</p>
+    <p>© 2026 Boukka — Derb Sultan, Casablanca</p>
+    <p>Machi ghi fast food.</p>
   </div>
 </footer>
 
-<a href="#order" class="fab" aria-label="commande rapide">🛵</a>
-
 <script src="menu-data.js"></script>
-<script src="script.js"></script>
+<script src="app.js"></script>
+<script src="home.js"></script>
 </body>
 </html>
