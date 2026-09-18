@@ -33,6 +33,10 @@ html{
   -webkit-text-size-adjust:100%;
 }
 
+/* l nav fixe kaghatti ras l page — bach l ancres ma ydkhloch t7tiha */
+[id]{scroll-margin-top:92px;}
+#top{scroll-margin-top:0;}
+
 body{
   background:var(--bg);
   color:var(--text);
