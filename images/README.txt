@@ -3,45 +3,46 @@ TSAWER DYAL SITE — kifach tkhdem bihom
 
 Kol plat f l menu 3ndou JOUJ tsawer:
 
-  <isem>.jpg    ->  tswira "msdouda"  (l plat kima kayji f l plat)
-  <isem>2.jpg   ->  tswira "m7loula"  (mn dakhel / ingrédients)
+  <isem>.jpg    ->  tswira li katbane 3adi
+  <isem>2.jpg   ->  tswira li katbane mli client y7ot souris fou9 (hover)
 
-L tswira "m7loula" katbane automatiquement mli client y7ot souris fou9 l tswira
-(f l menu, w 7tta f page dyal l produit). Bla ma tbeddel walo f l code.
-
-
-TSAWER 7A9I9IYIN (li 3titi)
----------------------------
-burger.jpg   + burger2.jpg    ->  Boukka Classic
-tacos.jpg    + tacos2.jpg     ->  Tacos Poulet
-pizza.jpg    + pizza2.jpg     ->  Pizza Boukka
-pasta.jpg    + pasta2.jpg     ->  Pasta Bolognaise
-
-(Les originaux 9bel l compression mkhebb3in f "originals/" — matms7homch.)
+L badal kaywqe3 automatiquement f l menu w f page dyal l produit.
+Bach tbeddel chi tswira: 7ot l fichier dyalek b NEFS L ISEM f had l dossier. Safi.
 
 
-PLACEHOLDERS — KHASSHOM YTBEDDLOU
----------------------------------
-Had les fichiers daba homa ghi tsawer m3ammrin (kaytkteb fihom "PHOTO A VENIR").
-Bach tbeddel wa7ed: 7ot l fichier dyalek f had l dossier b NEFS L ISEM. Safi.
+MNIN JAW TSAWER
+---------------
+· burger / tacos / pizza / pasta  ->  TSAWER DYALEK (li 3titini)
+  Les originaux 9bel l compression mkhebb3in f "originals/" — matms7homch.
 
-double-cheese.jpg    + double-cheese2.jpg     ->  Double Cheese Bomb
-spicy-chicken.jpg    + spicy-chicken2.jpg     ->  Spicy Chicken
-tacos-viande.jpg     + tacos-viande2.jpg      ->  Tacos Viande Hachée
-tacos-mixte.jpg      + tacos-mixte2.jpg       ->  Tacos Mixte
-pizza-4fromages.jpg  + pizza-4fromages2.jpg   ->  Pizza 4 Fromages
-pasta-alfredo.jpg    + pasta-alfredo2.jpg     ->  Pasta Alfredo
-frites.jpg           + frites2.jpg            ->  Frites Maison
-onion-rings.jpg      + onion-rings2.jpg       ->  Onion Rings
-nuggets.jpg          + nuggets2.jpg           ->  Nuggets x6
-milkshake.jpg        + milkshake2.jpg         ->  Milkshake Chocolat
-jus-orange.jpg       + jus-orange2.jpg        ->  Jus d'Orange
-coca.jpg             + coca2.jpg              ->  Coca-Cola
+· L b9iya (22 plat)  ->  Pexels (pexels.com)
+  License dyal Pexels: khdma b free, 7ta f l commercial, bla ma t7tej
+  t3ti attribution. Kolhom m9essin l 900x675 w mkhessrin l taille.
+
+⚠️  MOHIMM: had tsawer machi dyal l makla dyalek nta — homa tsawer
+    "stock". Ila had site ghadi ykhdem b sse7 m3a clients, khassek
+    tbeddelhom b tsawer dyal l makla li kat-bi3 nta, 7it client
+    kayestenna li chaf.
+
+
+LISTE KAMLA
+-----------
+BURGERS   burger / double-cheese / spicy-chicken
+TACOS     tacos / tacos-viande / tacos-mixte
+BURRITOS  burrito-poulet / burrito-viande / burrito-veggie
+PIZZA     pizza / pizza-4fromages
+PASTA     pasta / pasta-alfredo
+SALADES   salade-cesar / salade-poulet / salade-mediterraneenne
+SIDES     frites / onion-rings / nuggets
+DRINKS    coca / jus-orange / milkshake / limonade / the-glace /
+          smoothie-mangue / eau
+
+(kol wa7ed b <isem>.jpg + <isem>2.jpg)
 
 
 NSAYE7
 ------
 · Taille mzyana: 900x675 wla kbir (format 4:3).
-· Ila tswira dyalek kbira bezzaf (+2 MB), goli liya w n-compressiha — site ghaytir b zerba.
-· Bghiti tzid plat JDID? Goli liya smiytou, l prix, w les ingrédients,
+· Ila tswira dyalek kbira bezzaf (+2 MB), goli liya w n-compressiha.
+· Bghiti tzid plat JDID? Goli liya smiytou, l prix w les ingrédients,
   w nzidou f "menu-data.js".

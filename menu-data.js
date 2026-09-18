@@ -8,13 +8,15 @@
 // 7ot l fichier dyalek f "images/" b NEFS l isem (masalan images/frites.jpg) w safi.
 
 const CATEGORIES = [
-  { id: "all",     label: "Kolchi" },
-  { id: "burgers", label: "Burgers" },
-  { id: "tacos",   label: "Tacos" },
-  { id: "pizza",   label: "Pizza" },
-  { id: "pasta",   label: "Pasta" },
-  { id: "sides",   label: "Sides" },
-  { id: "drinks",  label: "Drinks" }
+  { id: "all",      label: "Kolchi" },
+  { id: "burgers",  label: "Burgers" },
+  { id: "tacos",    label: "Tacos" },
+  { id: "burritos", label: "Burritos" },
+  { id: "pizza",    label: "Pizza" },
+  { id: "pasta",    label: "Pasta" },
+  { id: "salades",  label: "Salades" },
+  { id: "sides",    label: "Sides" },
+  { id: "drinks",   label: "Drinks" }
 ];
 
 const MENU = [
@@ -82,6 +84,37 @@ const MENU = [
     badge: "Chef's pick"
   },
   {
+    id: "burrito-poulet",
+    cat: "burritos",
+    name: "Burrito Poulet",
+    desc: "Poulet mtebbel, rouz, l3ades 7amra, jben w guacamole, kolchi mleffef.",
+    ingredients: ["Tortilla kbira", "Poulet mtebbel", "Rouz + l3ades", "Guacamole"],
+    price: 38,
+    img: "images/burrito-poulet.jpg",
+    img2: "images/burrito-poulet2.jpg"
+  },
+  {
+    id: "burrito-viande",
+    cat: "burritos",
+    name: "Burrito Viande",
+    desc: "Viande hachée mtiyyba b les épices, rouz, jben cheddar w sauce chipotle.",
+    ingredients: ["Tortilla kbira", "Viande hachée", "Cheddar", "Sauce chipotle"],
+    price: 42,
+    img: "images/burrito-viande.jpg",
+    img2: "images/burrito-viande2.jpg",
+    badge: "Jdid"
+  },
+  {
+    id: "burrito-veggie",
+    cat: "burritos",
+    name: "Burrito Veggie",
+    desc: "L3ades, rouz, khoudra mchewya, guacamole w sauce bayda. Bla l7em.",
+    ingredients: ["Tortilla kbira", "L3ades 7amra", "Khoudra mchewya", "Guacamole"],
+    price: 34,
+    img: "images/burrito-veggie.jpg",
+    img2: "images/burrito-veggie2.jpg"
+  },
+  {
     id: "pizza-boukka",
     cat: "pizza",
     name: "Pizza Boukka",
@@ -121,6 +154,37 @@ const MENU = [
     price: 44,
     img: "images/pasta-alfredo.jpg",
     img2: "images/pasta-alfredo2.jpg"
+  },
+  {
+    id: "salade-cesar",
+    cat: "salades",
+    name: "Salade César",
+    desc: "Laitue romaine, poulet grillé, croûtons mqermchin, parmesan w sauce César.",
+    ingredients: ["Laitue romaine", "Poulet grillé", "Croûtons", "Parmesan + sauce César"],
+    price: 36,
+    img: "images/salade-cesar.jpg",
+    img2: "images/salade-cesar2.jpg"
+  },
+  {
+    id: "salade-poulet",
+    cat: "salades",
+    name: "Salade Poulet Grillé",
+    desc: "Khoudra tazja, poulet grillé, avocat, tomates cerises w vinaigrette lemoun.",
+    ingredients: ["Mélange khoudra", "Poulet grillé", "Avocat", "Vinaigrette lemoun"],
+    price: 40,
+    img: "images/salade-poulet.jpg",
+    img2: "images/salade-poulet2.jpg",
+    badge: "Khfifa"
+  },
+  {
+    id: "salade-mediterraneenne",
+    cat: "salades",
+    name: "Salade Méditerranéenne",
+    desc: "Tomate, khyar, zaytoun, feta w zit zaytoun. Bla l7em, w bnina.",
+    ingredients: ["Tomate + khyar", "Zaytoun", "Feta", "Zit zaytoun"],
+    price: 32,
+    img: "images/salade-mediterraneenne.jpg",
+    img2: "images/salade-mediterraneenne2.jpg"
   },
   {
     id: "frites-maison",
@@ -182,6 +246,47 @@ const MENU = [
     price: 8,
     img: "images/coca.jpg",
     img2: "images/coca2.jpg"
+  },
+  {
+    id: "limonade",
+    cat: "drinks",
+    name: "Limonade Na3na3",
+    desc: "Lemoun m3sour f l moment, na3na3 tazej w glaçons. Bared w kayfi9.",
+    ingredients: ["Lemoun m3sour", "Na3na3 tazej", "Glaçons", "50 cl"],
+    price: 16,
+    img: "images/limonade.jpg",
+    img2: "images/limonade2.jpg"
+  },
+  {
+    id: "the-glace",
+    cat: "drinks",
+    name: "Thé Glacé Lemoun",
+    desc: "Atay bared, lemoun w chwiya d sukkar. 50 cl.",
+    ingredients: ["Atay", "Lemoun", "50 cl", "Bared"],
+    price: 14,
+    img: "images/the-glace.jpg",
+    img2: "images/the-glace2.jpg"
+  },
+  {
+    id: "smoothie-mangue",
+    cat: "drinks",
+    name: "Smoothie Mangue",
+    desc: "Mangue, yaourt w chwiya d 3sel. Tkhin w bnin.",
+    ingredients: ["Mangue", "Yaourt", "3sel", "Bla sukkar zayed"],
+    price: 24,
+    img: "images/smoothie-mangue.jpg",
+    img2: "images/smoothie-mangue2.jpg",
+    badge: "Jdid"
+  },
+  {
+    id: "eau",
+    cat: "drinks",
+    name: "Eau Minérale",
+    desc: "50 cl, barda.",
+    ingredients: ["50 cl", "Barda"],
+    price: 6,
+    img: "images/eau.jpg",
+    img2: "images/eau2.jpg"
   }
 ];
 
